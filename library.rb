@@ -32,3 +32,14 @@ class Student < Person
     return "¯\(ツ)/¯"
   end
 end
+
+class Teacher < Person
+  def initialize(name="unknown", age, parent_permission=true, specialization)
+    super(name,age,parent_permission)
+    @specialization = specialization
+  end
+  
+  def can_use_services
+    return true
+  end
+end
