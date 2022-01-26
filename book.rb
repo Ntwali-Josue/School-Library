@@ -9,4 +9,8 @@ class Book
     @author = author
     @rents = []
   end
+
+  def add_rental(date, person)
+    Rental.new(date, person, self)
+  end
 end

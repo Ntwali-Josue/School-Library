@@ -1,4 +1,5 @@
 require_relative './corrector'
+require_relative './rental'
 
 class Person
   # accessor for get and set methods for @age and @name
@@ -31,5 +32,9 @@ class Person
 
   def validate_name
     @name = @corrector.correct_name(@name)
+  end
+
+  def add_rental(date, book)
+    Rental.new(date, self, book)
   end
 end
