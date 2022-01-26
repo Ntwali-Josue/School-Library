@@ -13,7 +13,7 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @corrector = Corrector.new(name)
+    @corrector = Corrector.new
   end
 
   private # set is_of_age to private method
@@ -29,6 +29,6 @@ class Person
   end
 
   def validate_name
-    @corrector.correct_name
+    @name = @corrector.correct_name(@name)
   end
 end
