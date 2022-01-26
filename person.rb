@@ -4,8 +4,8 @@ class Person
   # accessor for get and set methods for @age and @name
   attr_accessor :name, :age
 
-  # add accessor for getting @id
-  attr_reader :id
+  # add accessor for getting @id and @rents
+  attr_reader :id, :rents
 
   # constructor with @age, @id, @name instance variables
   def initialize(age, parent_permission: true, name: 'unknown')
@@ -14,6 +14,7 @@ class Person
     @age = age
     @parent_permission = parent_permission
     @corrector = Corrector.new
+    @rents = []
   end
 
   private # set is_of_age to private method
