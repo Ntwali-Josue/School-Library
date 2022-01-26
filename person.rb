@@ -1,3 +1,5 @@
+require_relative './corrector'
+
 class Person
   # accessor for get and set methods for @age and @name
   attr_accessor :name, :age
@@ -11,6 +13,7 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @corrector = Corrector.new
   end
 
   private # set is_of_age to private method
@@ -23,5 +26,9 @@ class Person
 
   def can_use_services?
     return true if is_of_age? || parent_permission
+  end
+
+  def validate_name
+    @name = @corrector.correct_name(@name)
   end
 end
