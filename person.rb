@@ -9,7 +9,7 @@ class Person
   attr_reader :id, :rents
 
   # constructor with @age, @id, @name instance variables
-  def initialize(age, parent_permission: true, name: 'unknown')
+  def initialize(age:, parent_permission: true, name: 'unknown')
     @id = Random.rand(1..100)
     @name = name
     @age = age
