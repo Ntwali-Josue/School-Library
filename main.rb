@@ -13,7 +13,7 @@ class Library
   end
 
   def list_all_books
-    puts 'Library is empty' if @people.empty?
+    puts 'Library is empty' if @books.empty?
 
     @books.each do |book|
       print "Title: #{book.title.capitalize}, Author: #{book.author.capitalize}\n"
