@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # School Library
 
 > In this project, The user is able to create new student, professor.
